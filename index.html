@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Печать | Воплотим любую идею</title>
+    <!-- Подключаем CSS отдельно -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Навигация -->
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-cube" style="margin-right: 8px;"></i>3D Print Lab
+            </div>
+            <div class="nav-contacts">
+                <a href="#services">Услуги</a>
+                <a href="#gallery">Работы</a>
+                <a href="#calculator">Калькулятор</a>
+                <span class="nav-phone">
+                    <i class="fas fa-phone-alt" style="margin-right: 8px;"></i>8 (938) 111-85-85
+                </span>
+            </div>
+        </nav>
+
+        <!-- Hero секция -->
+        <section class="hero">
+            <h1>Воплотим <span>любую идею</span> в пластике</h1>
+            <p>От прототипа до готовой детали — современная 3D-печать на профессиональном оборудовании</p>
+        </section>
+
+        <!-- Блок Услуги -->
+        <section id="services">
+            <h2 class="section-title">Материалы и возможности</h2>
+            <div class="services-grid">
+                <!-- PLA карточка -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>PLA</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Биоразлагаемый</li>
+                        <li><i class="fas fa-check-circle"></i> Яркие цвета</li>
+                        <li><i class="fas fa-check-circle"></i> Без запаха</li>
+                    </ul>
+                </div>
+                
+                <!-- PETG карточка -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-cog"></i></div>
+                    <h3>PETG</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Прочный/гибкий</li>
+                        <li><i class="fas fa-check-circle"></i> Ударопрочный</li>
+                        <li><i class="fas fa-check-circle"></i> Для механизмов</li>
+                    </ul>
+                </div>
+                
+                <!-- ABS карточка -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-fire-extinguisher"></i></div>
+                    <h3>ABS</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Температуростойкий</li>
+                        <li><i class="fas fa-check-circle"></i> Прочный</li>
+                        <li><i class="fas fa-check-circle"></i> Для авто/техники</li>
+                    </ul>
+                </div>
+                
+                <!-- Смола карточка -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-fill-drip"></i></div>
+                    <h3>Смола (SLA)</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Гладкая поверхность</li>
+                        <li><i class="fas fa-check-circle"></i> Высокая детализация</li>
+                        <li><i class="fas fa-check-circle"></i> Ювелирка/стоматология</li>
+                    </ul>
+                </div>
+                
+                <!-- Размеры карточка -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-arrows-alt"></i></div>
+                    <h3>Макс. размеры</h3>
+                    <ul>
+                        <li><i class="fas fa-ruler"></i> 300 x 300 x 400 мм</li>
+                        <li><i class="fas fa-ruler"></i> 220 x 220 x 250 мм</li>
+                        <li><i class="fas fa-cubes"></i> Сборные модели до 1м</li>
+                    </ul>
+                </div>
+                
+                <!-- Головки карточка -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-print"></i></div>
+                    <h3>Головки</h3>
+                    <ul>
+                        <li><i class="fas fa-draw-polygon"></i> 1 экструдер (0.4 мм)</li>
+                        <li><i class="fas fa-draw-polygon"></i> 2 экструдера (гибрид)</li>
+                        <li><i class="fas fa-draw-polygon"></i> Поддержки раств.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Галерея (кликабельные карточки) -->
+        <section id="gallery">
+            <h2 class="section-title">Примеры работ</h2>
+            <div class="gallery-grid">
+                <!-- Карточка Шестеренки -->
+                <div class="gallery-item" onclick="openModal('gears')">
+                    <i class="fas fa-cogs"></i> 
+                    <span>шестеренки</span>
+                </div>
+                
+                <!-- Карточка Статуэтки -->
+                <div class="gallery-item" onclick="openModal('figurines')">
+                    <i class="fas fa-robot"></i> 
+                    <span>статуэтки</span>
+                </div>
+                
+                <!-- Карточка Прототипы -->
+                <div class="gallery-item" onclick="openModal('prototypes')">
+                    <i class="fas fa-flask"></i> 
+                    <span>прототипы</span>
+                </div>
+                
+                <!-- Карточка Миниатюры -->
+                <div class="gallery-item" onclick="openModal('miniatures')">
+                    <i class="fas fa-dragon"></i> 
+                    <span>миниатюры</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Калькулятор -->
+        <section id="calculator">
+            <div class="calculator-block">
+                <div class="calc-title">
+                    <i class="fas fa-calculator" style="color:#2A5C7F;"></i> 
+                    Приблизительный расчёт стоимости
+                </div>
+                <div class="calc-row">
+                    <div class="calc-slider">
+                        <label><i class="fas fa-percent"></i> Заполнение: <span id="fillValue">20%</span></label>
+                        <input type="range" id="fillRange" min="5" max="100" value="20" step="1">
+                    </div>
+                    <div class="calc-select">
+                        <label><i class="fas fa-droplet"></i> Материал:</label>
+                        <select id="materialSelect">
+                            <option value="pla">PLA</option>
+                            <option value="petg" selected>PETG</option>
+                            <option value="abs">ABS</option>
+                            <option value="resin">Смола</option>
+                        </select>
+                    </div>
+                    <div class="calc-button">
+                        <button class="btn" id="calcBtn"><i class="fas fa-sync-alt"></i> Рассчитать</button>
+                    </div>
+                </div>
+                <div class="price-hint">
+                    ⚡ Примерная цена: <strong id="priceResult">от 1250 ₽</strong> (зависит от модели)
+                </div>
+            </div>
+        </section>
+
+        <!-- Футер -->
+        <footer class="footer">
+            <div class="footer-grid">
+                <div class="footer-contacts">
+                    <a href="tel:+79381118585" class="phone-big">
+                        <i class="fas fa-phone-alt"></i> 8 (938) 111-85-85
+                    </a>
+                    <div class="manager-name">
+                        <i class="fas fa-user-tie"></i> Исмаил Масаев — ваш менеджер
+                    </div>
+                    <div class="social-icons">
+                        <i class="fab fa-telegram"></i>
+                        <i class="fab fa-whatsapp"></i>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                </div>
+                <div class="footer-button">
+                    <button class="btn-upload" onclick="alert('Загрузка модели (.stl/.obj) — демо-режим')">
+                        <i class="fas fa-cloud-upload-alt"></i> Загрузить 3D-модель
+                    </button>
+                </div>
+            </div>
+            <div class="footer-copy">
+                © 2026 3D Print Lab — печать любого уровня сложности. Исмаил Масаев, технологии и уют.
+            </div>
+        </footer>
+    </div>
+
+    <!-- Модальные окна (всплывающие окна для каждой карточки) -->
+    
+    <!-- Модальное окно для Шестеренок -->
+    <div id="modal-gears" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('gears')">&times;</span>
+            <h2>Игрушки</h2>
+            <div class="modal-gallery">
+                <img src="https://sls-3d.ru/files/images/20250811_1630_3d-printer-shesteryonki_simple_compose_01k2chmbdfettsjtwvbmknmvgp.png">
+                <img src="https://avatars.mds.yandex.net/i?id=e7fe5dc3b675253e51675ac8f5a14efe_l-5647550-images-thumbs&n=13">
+                <img src="https://p0.zoon.ru/preview/S6HQ14AHGVRcZDbNgyRbQg/2400x1500x75/1/5/8/original_6060adb1e33c345b515c3a95_60745d54ade34.jpg">
+            </div>
+            <div class="modal-description">
+                <p><strong>Материал:</strong> PETG / PLA / Нейлон</p>
+                <p><strong>Точность:</strong> ±0.1 мм</p>
+                <p><strong>Применение:</strong> Промышленные прототипы, робототехника, редукторы, часы.</p>
+                <p><strong>Особенности:</strong> Высокая износостойкость, идеальное зацепление зубьев, возможность печати подвижных механизмов без сборки.</p>
+                <p><strong>Срок печати:</strong> от 4 часов</p>
+                <p><strong>Цена:</strong> от 1500 ₽</p>
+                <button class="btn modal-btn" onclick="alert('Заказ шестеренок: 8 (938) 111-85-85')">Заказать</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для Статуэток -->
+    <div id="modal-figurines" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('figurines')">&times;</span>
+            <h2>Статуэтки и коллекционные фигурки</h2>
+            <div class="modal-gallery">
+                <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=400&fit=crop" alt="Статуэтка дракона" onerror="this.src='https://via.placeholder.com/400x400?text=Статуэтка+дракона'">
+                <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=400&fit=crop&bw=1" alt="Фигурка персонажа" onerror="this.src='https://via.placeholder.com/400x400?text=Персонаж'">
+                <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=400&fit=crop&sepia=1" alt="Миниатюра" onerror="this.src='https://via.placeholder.com/400x400?text=Миниатюра'">
+            </div>
+            <div class="modal-description">
+                <p><strong>Материал:</strong> Смола (SLA) / PLA</p>
+                <p><strong>Детализация:</strong> до 25 микрон</p>
+                <p><strong>Применение:</strong> Подарки, коллекционирование, настольные игры, косплей.</p>
+                <p><strong>Особенности:</strong> Идеальная гладкость поверхности, проработка мелких деталей, возможна полноцветная печать.</p>
+                <p><strong>Срок печати:</strong> от 6 часов</p>
+                <p><strong>Цена:</strong> от 2000 ₽</p>
+                <button class="btn modal-btn" onclick="alert('Заказ статуэток: 8 (938) 111-85-85')">Заказать</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для Прототипов -->
+    <div id="modal-prototypes" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('prototypes')">&times;</span>
+            <h2>Инженерные прототипы</h2>
+            <div class="modal-gallery">
+                <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=400&h=400&fit=crop&bw=1" alt="Прототип детали" onerror="this.src='https://via.placeholder.com/400x400?text=Прототип'">
+                <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=400&h=400&fit=crop&bw=1&rot=90" alt="Технический прототип" onerror="this.src='https://via.placeholder.com/400x400?text=Технический'">
+                <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=400&h=400&fit=crop&bw=1&rot=180" alt="Макет" onerror="this.src='https://via.placeholder.com/400x400?text=Макет'">
+            </div>
+            <div class="modal-description">
+                <p><strong>Материал:</strong> ABS / PETG / PLA</p>
+                <p><strong>Точность:</strong> ±0.05 мм</p>
+                <p><strong>Применение:</strong> Функциональные тесты, проверка сборки, предпроизводственные образцы.</p>
+                <p><strong>Особенности:</strong> Быстрое изготовление (от 1 дня), возможность печати крупногабаритных деталей, итерации по вашему желанию.</p>
+                <p><strong>Срок печати:</strong> от 2 часов</p>
+                <p><strong>Цена:</strong> от 800 ₽</p>
+                <button class="btn modal-btn" onclick="alert('Заказ прототипа: 8 (938) 111-85-85')">Заказать</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для Миниатюр -->
+    <div id="modal-miniatures" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('miniatures')">&times;</span>
+            <h2>Миниатюры для игр и диорам</h2>
+            <div class="modal-gallery">
+                <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=400&fit=crop&bw=1" alt="Миниатюра солдатика" onerror="this.src='https://via.placeholder.com/400x400?text=Миниатюра'">
+                <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=400&fit=crop&sepia=1" alt="Здание для диорамы" onerror="this.src='https://via.placeholder.com/400x400?text=Диорама'">
+                <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=400&fit=crop" alt="Фигурка для варгейма" onerror="this.src='https://via.placeholder.com/400x400?text=Варгейм'">
+            </div>
+            <div class="modal-description">
+                <p><strong>Материал:</strong> Смола / PLA</p>
+                <p><strong>Размеры:</strong> от 10 мм до 150 мм</p>
+                <p><strong>Применение:</strong> Настольные игры (Warhammer, D&D), коллекционирование, моделизм.</p>
+                <p><strong>Особенности:</strong> Высочайшая детализация (до 10 микрон), поддержка сложных геометрий, идеально для покраски.</p>
+                <p><strong>Срок печати:</strong> от 3 часов</p>
+                <p><strong>Цена:</strong> от 500 ₽</p>
+                <button class="btn modal-btn" onclick="alert('Заказ миниатюр: 8 (938) 111-85-85')">Заказать</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Скрипты -->
+    <script>
+        // Функции для открытия и закрытия модальных окон
+        function openModal(type) {
+            document.getElementById('modal-' + type).style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // запрещаем прокрутку фона
+        }
+
+        function closeModal(type) {
+            document.getElementById('modal-' + type).style.display = 'none';
+            document.body.style.overflow = 'auto'; // возвращаем прокрутку
+        }
+
+        // Закрытие модального окна при клике вне его области
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Калькулятор
+        (function() {
+            const range = document.getElementById('fillRange');
+            const span = document.getElementById('fillValue');
+            const material = document.getElementById('materialSelect');
+            const priceSpan = document.getElementById('priceResult');
+
+            function updatePrice() {
+                let fill = parseInt(range.value, 10);
+                let mat = material.value;
+                let base = 800;
+                
+                if (mat === 'pla') base = 750;
+                else if (mat === 'petg') base = 950;
+                else if (mat === 'abs') base = 1100;
+                else if (mat === 'resin') base = 1700;
+
+                let total = Math.round(base + (fill * 12));
+                priceSpan.innerText = 'от ' + total + ' ₽';
+            }
+
+            range.addEventListener('input', function() {
+                span.innerText = range.value + '%';
+                updatePrice();
+            });
+
+            material.addEventListener('change', updatePrice);
+
+            document.getElementById('calcBtn').addEventListener('click', function(e) {
+                e.preventDefault();
+                updatePrice();
+                this.style.transform = 'scale(0.96)';
+                setTimeout(() => { this.style.transform = ''; }, 150);
+                alert('✅ Примерная стоимость обновлена');
+            });
+
+            updatePrice();
+        })();
+    </script>
+</body>
+</html>
